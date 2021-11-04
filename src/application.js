@@ -14,6 +14,17 @@ const days = require("./routes/days");
 const appointments = require("./routes/appointments");
 const interviewers = require("./routes/interviewers");
 
+
+
+// axios.get('http://localhost:8001/api/debug/reset')
+//   .then(res => {
+//     console.log("api connected");
+//   });
+
+
+
+
+
 function read(file) {
   return new Promise((resolve, reject) => {
     fs.readFile(
@@ -31,7 +42,7 @@ function read(file) {
 
 module.exports = function application(
   ENV,
-  actions = { updateAppointment: () => {} }
+  actions = { updateAppointment: () => { } }
 ) {
   app.use(cors());
   app.use(helmet());
